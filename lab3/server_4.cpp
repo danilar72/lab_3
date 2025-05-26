@@ -23,7 +23,7 @@ public:
         });
     }
 
-    ~Session() {  // Исправлено: публичный деструктор
+    ~Session() {  
         boost::system::error_code ec;
         socket_.shutdown(tcp::socket::shutdown_both, ec);
         socket_.close(ec);
